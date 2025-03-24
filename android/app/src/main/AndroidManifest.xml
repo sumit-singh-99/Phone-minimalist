@@ -1,0 +1,165 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.phone_minimalist_major">
+
+    <!-- ✅ Required Permissions -->
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <!-- ✅ Retained QUERY_ALL_PACKAGES to query installed apps -->
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+
+    <application
+        android:label="phone_minimalist_major"
+        android:icon="@mipmap/ic_launcher"
+        android:requestLegacyExternalStorage="true">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:taskAffinity=""
+            android:theme="@style/LaunchTheme"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustResize">
+
+            <meta-data
+                android:name="io.flutter.embedding.android.NormalTheme"
+                android:resource="@style/NormalTheme" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="flutterEmbedding"
+            android:value="2" />
+    </application>
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.PROCESS_TEXT"/>
+            <data android:mimeType="text/plain"/>
+        </intent>
+
+        <!-- Removed duplicate Netflix entry under Video Streaming Apps -->
+        <!-- Removed 'com.flipkart.seller' (not a customer app) under Grocery Delivery Apps -->
+
+        <package android:name="com.linkedin.android"/> <!-- LinkedIn -->
+        <package android:name="com.whatsapp"/>
+        <package android:name="com.google.android.gm"/>
+        <package android:name="com.google.android.youtube"/>
+        <package android:name="com.android.chrome"/>
+        <package android:name="com.google.android.googlequicksearchbox"/>
+        <package android:name="com.android.dialer"/>
+        <package android:name="com.android.camera"/>
+        <package android:name="com.google.android.apps.photos"/>
+        <package android:name="com.google.android.calendar"/>
+        <package android:name="com.android.settings"/>
+        <package android:name="com.android.deskclock"/>
+        <package android:name="com.google.android.apps.nbu.paisa.user"/>
+        <package android:name="com.phonepe.app"/>
+        <package android:name="net.one97.paytm"/>
+
+        <!-- Video Streaming Apps -->
+        <package android:name="com.disney.disneyplus"/>
+        <package android:name="com.amazon.avod.thirdpartyclient"/>
+        <package android:name="com.hulu.plus"/>
+        <package android:name="com.hbo.hbonow"/>
+        <package android:name="com.apple.android.appletv"/>
+        <package android:name="com.peacocktv.peacockandroid"/>
+        <package android:name="com.cbs.app"/>
+        <package android:name="com.crunchyroll.crunchyroid"/>
+        <package android:name="com.funimation.funimationnow"/>
+        <package android:name="com.sonyliv"/>
+        <package android:name="in.startv.hotstar"/>
+        <package android:name="com.zee5.Zee5App"/>
+        <package android:name="com.vudu.android"/>
+        <package android:name="com.tubitv"/>
+        <package android:name="com.plexapp.android"/>
+        <package android:name="tv.pluto.android"/>
+        <package android:name="com.jio.jioplay.tv"/>
+        <package android:name="com.mxtech.videoplayer.ad"/>
+
+        <!-- Social Media Apps -->
+        <package android:name="com.facebook.katana"/>
+        <package android:name="com.instagram.android"/>
+        <package android:name="com.twitter.android"/>
+        <package android:name="com.snapchat.android"/>
+        <package android:name="com.zhiliaoapp.musically"/>
+        <package android:name="com.reddit.frontpage"/>
+        <package android:name="com.pinterest"/>
+        <package android:name="com.instagram.threadsapp"/>
+        <package android:name="com.tencent.mm"/>
+        <package android:name="org.telegram.messenger"/>
+        <package android:name="com.discord"/>
+        <package android:name="com.clubhouse.app"/>
+        <package android:name="com.tumblr"/>
+        <package android:name="com.koo.app"/>
+        <package android:name="org.joinmastodon.android"/>
+        <package android:name="com.tmtg.apps.truthsocial"/>
+        <package android:name="co.vero.app"/>
+        <package android:name="com.bereal.ft"/>
+
+        <!-- Online Shopping Apps -->
+        <package android:name="in.amazon.mShop.android.shopping"/>
+        <package android:name="com.flipkart.android"/>
+        <package android:name="com.ebay.mobile"/>
+        <package android:name="com.alibaba.aliexpresshd"/>
+        <package android:name="com.walmart.android"/>
+        <package android:name="in.myntra.android"/>
+        <package android:name="com.snapdeal.main"/>
+        <package android:name="com.bestbuy.android"/>
+        <package android:name="com.shopify.mobile"/>
+        <package android:name="com.etsy.android"/>
+        <package android:name="com.nykaa"/>
+        <package android:name="com.ajio.online"/>
+        <package android:name="com.meesho.supply"/>
+        <package android:name="com.zzkko"/>
+        <package android:name="com.lenskart.app"/>
+        <package android:name="com.decathlon.app"/>
+        <package android:name="com.tatacliq"/>
+        <package android:name="com.koovs.fashion"/>
+        <package android:name="de.zalando.mobile"/>
+        <package android:name="com.shein.shopping"/>
+
+        <!-- Food Delivery Apps -->
+        <package android:name="com.ubercab.eats"/>
+        <package android:name="com.application.zomato"/>
+        <package android:name="in.swiggy.android"/>
+        <package android:name="com.doordash.driverapp"/>
+        <package android:name="com.grubhub.android"/>
+        <package android:name="com.postmates.android"/>
+        <package android:name="com.dunzo.user"/>
+        <package android:name="com.deliveroo.orderapp"/>
+        <package android:name="com.global.foodpanda.android"/>
+        <package android:name="com.justeat.app"/>
+        <package android:name="com.eatsure.app"/>
+        <package android:name="com.glovo.android"/>
+        <package android:name="com.seamless.web"/>
+        <package android:name="com.chownow.orders"/>
+        <package android:name="com.gopuff.customer"/>
+        <package android:name="com.freshmenu.android"/>
+        <package android:name="com.rebeltech.faasos"/>
+        <package android:name="com.box8.user"/>
+        <package android:name="com.bigbasket.bba"/>
+        <package android:name="com.instacart.client"/>
+
+        <!-- Grocery Delivery Apps -->
+        <package android:name="com.bigbasket.mobileapp"/>
+        <package android:name="com.grofers.customerapp"/>
+        <package android:name="com.zepto.customer"/>
+        <package android:name="com.amazon.shopping"/>
+        <package android:name="com.walmart.grocery"/>
+        <package android:name="com.dunzo.user"/>
+        <package android:name="com.jiomart.customer"/>
+        <package android:name="com.godrej.naturesbasket"/>
+        <package android:name="in.swiggy.instamart"/>
+        <package android:name="com.metro.metroindia"/>
+
+    </queries>
+</manifest>
